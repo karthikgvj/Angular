@@ -18,8 +18,7 @@ export class AppComponent {
      this._enrollmentService.enroll(this.userModel)
      .subscribe (
        data => console.log('success', data),
-       error => console.log('error!',error)
-       
-     )
+       error => console.log('error!', error)
+       )
    }
 }

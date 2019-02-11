@@ -1,23 +1,23 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-const cors = require('cors')
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 
-const app = express()
+const app = express();
 
-const PORT = 3000;
+const PORT = 4000;
 
-app.use(bodyParser.json())
-app.use(cors())
+app.use(bodyParser.json());
+app.use(cors());
 
 app.get('/', (req,res) =>{
- res.send('hello from server')
+ res.send('hello from server');
 })
 
 app.post('/enroll', (req,res) =>{
     console.log(req.body)
-    res.status(200).send({"Message": "Data Received"})
+    res.status(200).send({"message": "Data Received"});
 })
 
 app.listen(PORT, (req,res) =>{
-    console.log('SERVER rumming on localhost'+ PORT)
+    console.log('SERVER rumming on localhost :' + PORT);
 })
